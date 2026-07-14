@@ -15,7 +15,7 @@ export function SkillsSection() {
       name: 'Cloud Platforms',
       icon: Cloud,
       color: '#4F8CFF',
-      skills: ['Azure', 'AWS', 'Google Cloud', 'Kubernetes', 'Docker'],
+      skills: ['Azure', 'Google Cloud', 'Kubernetes', 'Docker'],
     },
     {
       name: 'Data Engineering',
