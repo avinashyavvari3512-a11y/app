@@ -14,6 +14,9 @@ import { Footer } from '@/components/footer';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+const ParticleField3D = dynamic(() => import('@/components/3d/particle-field').then(mod => mod.ParticleField3D), { ssr: false });
 
 export default function HomePage() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -37,6 +40,9 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
+      {/* 3D Particle Field Background */}
+      <ParticleField3D />
+
       {/* Scroll Progress Indicator */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#4F8CFF] via-[#00D4FF] to-[#7C5CFC] z-50 origin-left"

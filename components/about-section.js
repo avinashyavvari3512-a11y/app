@@ -3,6 +3,10 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Award, Users, TrendingUp, Zap } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+const Globe3D = dynamic(() => import('@/components/3d/globe-3d').then(mod => mod.Globe3D), { ssr: false });
+const FloatingCubes3D = dynamic(() => import('@/components/3d/floating-cubes').then(mod => mod.FloatingCubes3D), { ssr: false });
 
 export function AboutSection() {
   const [ref, inView] = useInView({
@@ -167,8 +171,30 @@ export function AboutSection() {
               </div>
             </motion.div>
           </motion.div>
+
+          {/* 3D Globe Visualization */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="glass-card p-6 rounded-2xl"
+          >
+            <h4 className="text-xl font-bold text-white mb-4 text-center">Global Experience</h4>
+            <Globe3D />
+          </motion.div>
         </div>
       </div>
+
+      {/* Floating 3D Cubes */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 1.2 }}
+        className="mt-12"
+      >
+        <h3 className="text-2xl font-bold text-center text-white mb-6">Technology Stack</h3>
+        <FloatingCubes3D />
+      </motion.div>
     </section>
   );
 }

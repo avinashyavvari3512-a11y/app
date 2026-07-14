@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import { ExternalLink, Github, Filter } from 'lucide-react';
+import { Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
+import { ProjectCard3D } from '@/components/3d/project-card-3d';
 
 export function ProjectsSection() {
   const [ref, inView] = useInView({
@@ -140,92 +140,7 @@ export function ProjectsSection() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glass-card rounded-2xl overflow-hidden hover:scale-105 transition-all duration-300 group"
-              style={{
-                borderColor: `${project.color}40`,
-              }}
-            >
-              {/* Project Image */}
-              <div className="relative h-48 overflow-hidden bg-black/50">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: `linear-gradient(to bottom, transparent, ${project.color}20)`,
-                  }}
-                />
-              </div>
-
-              {/* Project Content */}
-              <div className="p-6">
-                <h3
-                  className="text-xl font-bold mb-2"
-                  style={{ color: project.color }}
-                >
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-1 rounded text-xs font-medium bg-white/5 border border-white/10 text-white"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Impact Metrics */}
-                <div className="space-y-2 mb-4">
-                  {project.impact.map((metric, i) => (
-                    <div key={i} className="flex items-center text-sm">
-                      <span
-                        className="mr-2"
-                        style={{ color: project.color }}
-                      >
-                        ✓
-                      </span>
-                      <span className="text-muted-foreground">{metric}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex gap-3">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex-1 border-white/20 hover:bg-white/10"
-                  >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex-1 border-white/20 hover:bg-white/10"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Demo
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
+            <ProjectCard3D key={index} project={project} index={index} />
           ))}
         </div>
       </div>

@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Download, Mail } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+const NeuralNetwork3D = dynamic(() => import('@/components/3d/neural-network-3d').then(mod => mod.NeuralNetwork3D), { ssr: false });
 
 const roles = [
   'Data Engineering',
@@ -33,6 +36,9 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden neural-bg">
+      {/* 3D Neural Network Background */}
+      <NeuralNetwork3D />
+
       {/* Animated Background Gradient */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#4F8CFF] rounded-full filter blur-[120px] animate-pulse" />
