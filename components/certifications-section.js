@@ -47,13 +47,6 @@ export function CertificationsSection() {
       color: '#00D4FF',
       icon: '🤖',
     },
-    {
-      name: 'AWS Certified Cloud Practitioner',
-      issuer: 'Amazon Web Services',
-      year: '2022',
-      color: '#7C5CFC',
-      icon: '☁️',
-    },
   ];
 
   return (
