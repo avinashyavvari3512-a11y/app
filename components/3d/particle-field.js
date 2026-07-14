@@ -30,17 +30,14 @@ function ParticleField({ mousePosition }) {
       const positions = pointsRef.current.geometry.attributes.position.array;
       
       for (let i = 0; i < particleCount; i++) {
-        // Move particles
         positions[i * 3] += particles.velocities[i * 3];
         positions[i * 3 + 1] += particles.velocities[i * 3 + 1];
         positions[i * 3 + 2] += particles.velocities[i * 3 + 2];
         
-        // Wrap around
         if (Math.abs(positions[i * 3]) > 10) positions[i * 3] *= -0.95;
         if (Math.abs(positions[i * 3 + 1]) > 10) positions[i * 3 + 1] *= -0.95;
         if (Math.abs(positions[i * 3 + 2]) > 10) positions[i * 3 + 2] *= -0.95;
         
-        // Mouse interaction
         if (mousePosition) {
           const dx = positions[i * 3] - mousePosition.x * 5;
           const dy = positions[i * 3 + 1] - mousePosition.y * 5;
@@ -79,7 +76,7 @@ function ParticleField({ mousePosition }) {
   );
 }
 
-export function ParticleField3D() {
+export default function ParticleField3D() {
   const [mousePosition, setMousePosition] = useState(null);
 
   useEffect(() => {

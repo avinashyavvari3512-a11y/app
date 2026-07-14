@@ -2,10 +2,9 @@
 
 import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Box, Text3D, Center } from '@react-three/drei';
-import * as THREE from 'three';
+import { Box } from '@react-three/drei';
 
-function FloatingCube({ position, color, label, rotationSpeed }) {
+function FloatingCube({ position, color, rotationSpeed }) {
   const meshRef = useRef();
   
   useFrame((state) => {
@@ -35,10 +34,10 @@ function FloatingCube({ position, color, label, rotationSpeed }) {
 
 function CubeScene() {
   const cubes = [
-    { position: [-3, 0, 0], color: '#4F8CFF', label: 'Cloud', rotationSpeed: [0.01, 0.02] },
-    { position: [-1, 0.5, -1], color: '#00D4FF', label: 'Data', rotationSpeed: [0.02, 0.01] },
-    { position: [1, -0.5, 0.5], color: '#7C5CFC', label: 'AI', rotationSpeed: [0.015, 0.025] },
-    { position: [3, 0.3, -0.5], color: '#4F8CFF', label: 'ML', rotationSpeed: [0.02, 0.015] },
+    { position: [-3, 0, 0], color: '#4F8CFF', rotationSpeed: [0.01, 0.02] },
+    { position: [-1, 0.5, -1], color: '#00D4FF', rotationSpeed: [0.02, 0.01] },
+    { position: [1, -0.5, 0.5], color: '#7C5CFC', rotationSpeed: [0.015, 0.025] },
+    { position: [3, 0.3, -0.5], color: '#4F8CFF', rotationSpeed: [0.02, 0.015] },
   ];
 
   return (
@@ -50,7 +49,7 @@ function CubeScene() {
   );
 }
 
-export function FloatingCubes3D() {
+export default function FloatingCubes3D() {
   return (
     <div className="w-full h-[300px]">
       <Canvas camera={{ position: [0, 0, 8], fov: 50 }}>

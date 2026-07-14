@@ -37,7 +37,6 @@ function Globe() {
     }
   });
 
-  // Create points for the globe grid
   const points = [];
   const radius = 2;
   for (let lat = -90; lat <= 90; lat += 10) {
@@ -73,7 +72,6 @@ function Globe() {
 
   return (
     <group>
-      {/* Main Globe */}
       <Sphere ref={meshRef} args={[2, 64, 64]}>
         <meshStandardMaterial 
           color="#0a0a0a"
@@ -85,7 +83,6 @@ function Globe() {
         />
       </Sphere>
 
-      {/* Grid Points */}
       <points ref={pointsRef}>
         <bufferGeometry>
           <bufferAttribute
@@ -104,7 +101,6 @@ function Globe() {
         />
       </points>
 
-      {/* Location Markers */}
       {locations.map((loc, i) => (
         <LocationMarker key={i} {...loc} />
       ))}
@@ -112,7 +108,7 @@ function Globe() {
   );
 }
 
-export function Globe3D() {
+export default function Globe3D() {
   return (
     <div className="w-full h-[400px]">
       <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>

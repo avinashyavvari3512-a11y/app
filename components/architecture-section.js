@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import dynamic from 'next/dynamic';
 
-const Architecture3D = dynamic(() => import('@/components/3d/architecture-3d').then(mod => mod.Architecture3D), { ssr: false });
+const Architecture3D = dynamic(() => import('@/components/3d/architecture-3d'), { ssr: false, loading: () => <div className="w-full h-[500px] glass-card rounded-2xl flex items-center justify-center"><p className="text-muted-foreground">Loading 3D Architecture...</p></div> });
 
 export function ArchitectureSection() {
   const [ref, inView] = useInView({
@@ -30,8 +30,8 @@ export function ArchitectureSection() {
         </motion.div>
 
         <div className="space-y-16">
-          {/* Enterprise Data Platform - 3D Version */}
-          <motion.div
+          {/* Enterprise Data Platform - 3D Version - Temporarily disabled */}
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -44,6 +44,22 @@ export function ArchitectureSection() {
               Drag to rotate • Scroll to zoom • Click nodes for details
             </p>
             <Architecture3D />
+          </motion.div> */}
+
+          {/* Placeholder message */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="glass-card p-12 rounded-2xl text-center"
+          >
+            <h3 className="text-2xl font-bold text-[#4F8CFF] mb-4">
+              Interactive 3D Architecture Diagrams
+            </h3>
+            <p className="text-muted-foreground text-lg">
+              3D visualizations are temporarily disabled due to compatibility issues.<br/>
+              The portfolio features 3D flip cards for projects - hover over project cards to see them in action!
+            </p>
           </motion.div>
         </div>
       </div>

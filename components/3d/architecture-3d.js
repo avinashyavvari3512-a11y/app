@@ -88,7 +88,7 @@ function DataPlatformArchitecture() {
   );
 }
 
-export function Architecture3D() {
+export default function Architecture3D() {
   return (
     <div className="w-full h-[500px]">
       <Canvas camera={{ position: [5, 0, 8], fov: 50 }}>

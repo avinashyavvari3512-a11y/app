@@ -91,7 +91,7 @@ function NeuralNetwork() {
   );
 }
 
-export function NeuralNetwork3D() {
+export default function NeuralNetwork3D() {
   return (
     <div className="absolute inset-0 opacity-40">
       <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>

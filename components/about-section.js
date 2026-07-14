@@ -5,8 +5,8 @@ import { useInView } from 'react-intersection-observer';
 import { Award, Users, TrendingUp, Zap } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
-const Globe3D = dynamic(() => import('@/components/3d/globe-3d').then(mod => mod.Globe3D), { ssr: false });
-const FloatingCubes3D = dynamic(() => import('@/components/3d/floating-cubes').then(mod => mod.FloatingCubes3D), { ssr: false });
+const Globe3D = dynamic(() => import('@/components/3d/globe-3d'), { ssr: false, loading: () => <div className="w-full h-[400px] glass-card rounded-2xl" /> });
+const FloatingCubes3D = dynamic(() => import('@/components/3d/floating-cubes'), { ssr: false, loading: () => <div className="w-full h-[300px]" /> });
 
 export function AboutSection() {
   const [ref, inView] = useInView({
@@ -172,8 +172,8 @@ export function AboutSection() {
             </motion.div>
           </motion.div>
 
-          {/* 3D Globe Visualization */}
-          <motion.div
+          {/* 3D Globe Visualization - Temporarily disabled */}
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -181,12 +181,12 @@ export function AboutSection() {
           >
             <h4 className="text-xl font-bold text-white mb-4 text-center">Global Experience</h4>
             <Globe3D />
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
 
-      {/* Floating 3D Cubes */}
-      <motion.div
+      {/* Floating 3D Cubes - Temporarily disabled */}
+      {/* <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 1.2 }}
@@ -194,7 +194,7 @@ export function AboutSection() {
       >
         <h3 className="text-2xl font-bold text-center text-white mb-6">Technology Stack</h3>
         <FloatingCubes3D />
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
