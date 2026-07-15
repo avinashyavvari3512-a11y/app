@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, RotateCcw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
@@ -14,16 +14,15 @@ export function ProjectCard3D({ project, index }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="relative h-[500px] cursor-pointer"
+      className="relative h-[500px]"
       style={{ perspective: '1000px' }}
-      onMouseEnter={() => setIsFlipped(true)}
-      onMouseLeave={() => setIsFlipped(false)}
     >
       <motion.div
-        className="relative w-full h-full"
+        className="relative w-full h-full cursor-pointer"
         style={{ transformStyle: 'preserve-3d' }}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6, type: 'spring' }}
+        onClick={() => setIsFlipped(!isFlipped)}
       >
         {/* Front of card */}
         <div
@@ -62,7 +61,7 @@ export function ProjectCard3D({ project, index }) {
             </p>
 
             {/* Technologies */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-4">
               {project.technologies.slice(0, 4).map((tech, i) => (
                 <span
                   key={i}
@@ -78,8 +77,10 @@ export function ProjectCard3D({ project, index }) {
               )}
             </div>
 
-            <div className="mt-4 text-xs text-center text-muted-foreground">
-              Hover to see details →
+            {/* Click to flip indicator */}
+            <div className="mt-6 flex items-center justify-center gap-2 text-sm text-[#4F8CFF] font-semibold">
+              <RotateCcw className="w-4 h-4" />
+              <span>Click to see details</span>
             </div>
           </div>
         </div>
@@ -93,69 +94,84 @@ export function ProjectCard3D({ project, index }) {
             borderColor: `${project.color}40`,
           }}
         >
-          <h3
-            className="text-xl font-bold mb-4"
-            style={{ color: project.color }}
-          >
-            {project.title}
-          </h3>
-
-          {/* Full Technologies List */}
-          <div className="mb-4">
-            <h4 className="text-sm font-semibold text-white mb-2">Technologies:</h4>
-            <div className="flex flex-wrap gap-2">
-              {project.technologies.map((tech, i) => (
-                <span
-                  key={i}
-                  className="px-2 py-1 rounded text-xs font-medium"
-                  style={{
-                    background: `${project.color}20`,
-                    border: `1px solid ${project.color}40`,
-                    color: project.color,
-                  }}
-                >
-                  {tech}
-                </span>
-              ))}
+          <div className="flex flex-col h-full">
+            <div className="flex items-center justify-between mb-4">
+              <h3
+                className="text-xl font-bold"
+                style={{ color: project.color }}
+              >
+                {project.title}
+              </h3>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsFlipped(false);
+                }}
+                className="p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+              >
+                <RotateCcw className="w-4 h-4 text-white" />
+              </button>
             </div>
-          </div>
 
-          {/* Impact Metrics */}
-          <div className="mb-4">
-            <h4 className="text-sm font-semibold text-white mb-2">Impact:</h4>
-            <div className="space-y-2">
-              {project.impact.map((metric, i) => (
-                <div key={i} className="flex items-center text-sm">
+            {/* Full Technologies List */}
+            <div className="mb-4">
+              <h4 className="text-sm font-semibold text-white mb-2">Technologies:</h4>
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, i) => (
                   <span
-                    className="mr-2"
-                    style={{ color: project.color }}
+                    key={i}
+                    className="px-2 py-1 rounded text-xs font-medium"
+                    style={{
+                      background: `${project.color}20`,
+                      border: `1px solid ${project.color}40`,
+                      color: project.color,
+                    }}
                   >
-                    ✓
+                    {tech}
                   </span>
-                  <span className="text-muted-foreground">{metric}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Action Buttons */}
-          <div className="flex gap-3 mt-auto">
-            <Button
-              size="sm"
-              variant="outline"
-              className="flex-1 border-white/20 hover:bg-white/10"
-            >
-              <Github className="w-4 h-4 mr-2" />
-              Code
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="flex-1 border-white/20 hover:bg-white/10"
-            >
-              <ExternalLink className="w-4 h-4 mr-2" />
-              Demo
-            </Button>
+            {/* Impact Metrics */}
+            <div className="mb-4 flex-1">
+              <h4 className="text-sm font-semibold text-white mb-2">Impact:</h4>
+              <div className="space-y-2">
+                {project.impact.map((metric, i) => (
+                  <div key={i} className="flex items-center text-sm">
+                    <span
+                      className="mr-2"
+                      style={{ color: project.color }}
+                    >
+                      ✓
+                    </span>
+                    <span className="text-muted-foreground">{metric}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex gap-3">
+              <Button
+                size="sm"
+                variant="outline"
+                className="flex-1 border-white/20 hover:bg-white/10"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Github className="w-4 h-4 mr-2" />
+                Code
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                className="flex-1 border-white/20 hover:bg-white/10"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Demo
+              </Button>
+            </div>
           </div>
         </div>
       </motion.div>
