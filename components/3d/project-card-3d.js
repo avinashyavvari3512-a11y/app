@@ -153,24 +153,49 @@ export function ProjectCard3D({ project, index }) {
 
             {/* Action Buttons */}
             <div className="flex gap-3">
-              <Button
-                size="sm"
-                variant="outline"
-                className="flex-1 border-white/20 hover:bg-white/10"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Github className="w-4 h-4 mr-2" />
-                Code
-              </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                className="flex-1 border-white/20 hover:bg-white/10"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Demo
-              </Button>
+              {project.architectureLink ? (
+                <>
+                  <Button
+                    size="sm"
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.location.href = project.architectureLink;
+                    }}
+                  >
+                    View Architecture
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="border-white/20 hover:bg-white/10"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Github className="w-4 h-4" />
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="flex-1 border-white/20 hover:bg-white/10"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Github className="w-4 h-4 mr-2" />
+                    Code
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="flex-1 border-white/20 hover:bg-white/10"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Demo
+                  </Button>
+                </>
+              )}
             </div>
           </div>
         </div>
