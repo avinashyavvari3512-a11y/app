@@ -8,6 +8,7 @@ import { ExperienceSection } from '@/components/experience-section';
 import { ProjectsSection } from '@/components/projects-section';
 import { ArchitectureSection } from '@/components/architecture-section';
 import { AchievementsSection } from '@/components/achievements-section';
+import { ResearchSection } from '@/components/research-section';
 import { CertificationsSection } from '@/components/certifications-section';
 import { ContactSection } from '@/components/contact-section';
 import { Footer } from '@/components/footer';
@@ -74,6 +75,9 @@ export default function HomePage() {
 
       {/* Achievements Section */}
       <AchievementsSection />
+
+      {/* Research Section */}
+      <ResearchSection />
 
       {/* Certifications Section */}
       <CertificationsSection />

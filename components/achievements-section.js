@@ -11,12 +11,12 @@ export function AchievementsSection() {
   });
 
   const achievements = [
-    { value: 15, suffix: 'M+', label: 'Records Processed', color: '#4F8CFF' },
-    { value: 50, suffix: '+', label: 'Dashboards Delivered', color: '#00D4FF' },
-    { value: 92, suffix: '%', label: 'Prediction Accuracy', color: '#7C5CFC' },
-    { value: 65, suffix: '%', label: 'Pipeline Improvement', color: '#4F8CFF' },
-    { value: 70, suffix: '%', label: 'Integration Efficiency', color: '#00D4FF' },
-    { value: 7, suffix: '+', label: 'Years Experience', color: '#7C5CFC' },
+    { value: 2, suffix: 'M+', label: 'Records Monthly', color: '#4F8CFF' },
+    { value: 12, suffix: 'M+', label: 'Medicaid Claims Unified', color: '#00D4FF' },
+    { value: 92, suffix: '%', label: 'ML Model Accuracy', color: '#7C5CFC' },
+    { value: 65, suffix: '%', label: 'Pipeline Speed Gain', color: '#4F8CFF' },
+    { value: 75, suffix: '%', label: 'Manual Review Reduction', color: '#00D4FF' },
+    { value: 35, suffix: '%', label: 'Dashboard Performance', color: '#7C5CFC' },
   ];
 
   return (

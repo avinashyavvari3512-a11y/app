@@ -23,20 +23,20 @@ export function AboutSection() {
     },
     {
       icon: Users,
-      value: '50+',
-      label: 'Dashboards Delivered',
+      value: '2M+',
+      label: 'Records Monthly',
       color: '#00D4FF',
     },
     {
       icon: TrendingUp,
-      value: '15M+',
-      label: 'Records Processed',
+      value: '92%',
+      label: 'ML Model Accuracy',
       color: '#7C5CFC',
     },
     {
       icon: Zap,
       value: '65%',
-      label: 'Pipeline Improvement',
+      label: 'Pipeline Speed Gain',
       color: '#4F8CFF',
     },
   ];
@@ -73,31 +73,31 @@ export function AboutSection() {
               
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  With over <span className="text-[#4F8CFF] font-semibold">7 years of experience</span> in 
-                  enterprise data engineering, I specialize in designing and building 
-                  <span className="text-white font-semibold"> AI-ready cloud data platforms</span> that 
-                  process millions of records and deliver actionable insights.
+                  Modern AI systems depend on reliable data engineering, scalable cloud platforms, and governed 
+                  data products before machine learning can create business value. With <span className="text-[#4F8CFF] font-semibold">7+ years of experience</span>, 
+                  I have designed and delivered <span className="text-white font-semibold">enterprise healthcare data platforms</span> that 
+                  support advanced analytics, predictive modeling, and AI-enabled applications.
                 </p>
                 
                 <p>
-                  My expertise spans across <span className="text-[#00D4FF] font-semibold">healthcare analytics</span>, 
-                  where I've architected solutions processing <span className="text-white font-semibold">15M+ records monthly</span>, 
-                  implementing advanced <span className="text-[#7C5CFC] font-semibold">machine learning models</span> with 
-                  92% prediction accuracy, and building intelligent data pipelines that reduced processing time by 65%.
+                  My work includes building <span className="text-[#00D4FF] font-semibold">distributed data pipelines processing 2M+ records monthly</span>, 
+                  AI-ready datasets, feature engineering workflows, and <span className="text-[#7C5CFC] font-semibold">cloud lakehouse architectures</span> using 
+                  Python, PySpark, Azure Databricks, Azure Data Factory, Snowflake, Delta Lake, SQL Server, and Power BI.
                 </p>
                 
                 <p>
-                  I focus on solving real business problems rather than just implementing technology. 
-                  Whether it's building a <span className="text-white font-semibold">Healthcare AI Lakehouse</span> on Azure, 
-                  implementing <span className="text-[#4F8CFF] font-semibold">RAG-powered knowledge assistants</span>, 
-                  or architecting <span className="text-[#00D4FF] font-semibold">revenue cycle intelligence platforms</span> - 
-                  my goal is always to deliver <span className="text-white font-semibold">measurable business value</span>.
+                  At <span className="text-white font-semibold">Henry Ford Health</span>, I develop enterprise healthcare intelligence solutions 
+                  transforming Epic clinical, revenue cycle, and operational data into governed semantic models. Previously at 
+                  <span className="text-white font-semibold"> Human Services Research Institute</span>, I engineered scalable lakehouse platforms 
+                  that unified <span className="text-[#4F8CFF] font-semibold">12M+ Medicaid claims</span> and enabled predictive models with 
+                  <span className="text-[#00D4FF] font-semibold">92% accuracy</span>, supporting healthcare funding decisions exceeding $2.5M.
                 </p>
 
                 <p>
-                  Currently, I'm pioneering the integration of <span className="text-[#7C5CFC] font-semibold">Generative AI</span> into 
-                  enterprise data platforms, building intelligent systems that leverage LLMs, vector databases, and modern 
-                  data architectures to transform how organizations work with data.
+                  Beyond professional work, I actively build <span className="text-[#7C5CFC] font-semibold">applied AI projects</span> focused on 
+                  Retrieval Augmented Generation (RAG), LLM-powered applications, agentic workflows, and intelligent healthcare solutions—including 
+                  <span className="text-white font-semibold"> Nexus AI</span>, a modular enterprise AI platform demonstrating production-ready 
+                  autonomous agents, multi-agent orchestration, and domain-adapted LLM fine-tuning.
                 </p>
               </div>
             </div>
@@ -149,12 +149,12 @@ export function AboutSection() {
               <h4 className="text-xl font-bold text-white mb-4">Core Expertise</h4>
               <div className="flex flex-wrap gap-3">
                 {[
-                  'Enterprise Data Platforms',
-                  'Healthcare Analytics',
-                  'AI/ML Integration',
-                  'Cloud Architecture',
-                  'Platform Leadership',
-                  'Scalability & Performance',
+                  'Enterprise AI Platforms',
+                  'Healthcare Data Engineering',
+                  'Agentic AI & RAG Systems',
+                  'Cloud Lakehouse Architecture',
+                  'Production ML Systems',
+                  'HIPAA & Data Governance',
                 ].map((skill, i) => (
                   <span
                     key={i}

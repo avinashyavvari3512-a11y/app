@@ -13,12 +13,12 @@ const NeuralNetwork3D = dynamic(() => import('@/components/3d/neural-network-3d'
 });
 
 const roles = [
-  'Data Engineering',
-  'Artificial Intelligence',
-  'Cloud Platforms',
-  'Healthcare Analytics',
-  'Machine Learning',
-  'Generative AI',
+  'AI & Data Engineering',
+  'Healthcare Data Platforms',
+  'Agentic AI Systems',
+  'LLM Engineering',
+  'Cloud Lakehouse Architecture',
+  'Production AI Systems',
 ];
 
 export function HeroSection() {
@@ -86,11 +86,11 @@ export function HeroSection() {
           </h1>
 
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Senior Data Engineer
+            AI & Data Engineering Leader
           </h2>
 
           <p className="text-xl md:text-2xl text-[#00D4FF] mb-8 font-semibold">
-            Building Intelligent Data Platforms for AI
+            Building Enterprise Healthcare AI Platforms & Governed Data Products
           </p>
 
           {/* Animated Role Typing */}
@@ -109,9 +109,10 @@ export function HeroSection() {
           </div>
 
           <p className="max-w-4xl mx-auto text-base md:text-lg text-muted-foreground mb-12 leading-relaxed">
-            I build enterprise-scale cloud data platforms, AI-ready architectures, 
-            healthcare analytics solutions, and intelligent systems that transform 
-            complex data into measurable business value.
+            Over 7+ years designing enterprise healthcare data platforms that support advanced analytics, 
+            predictive modeling, and AI-enabled applications. I engineer scalable cloud lakehouse architectures, 
+            AI-ready datasets, and production AI systems using Azure Databricks, Snowflake, PySpark, LLMs, 
+            and agentic workflows—transforming complex healthcare data into measurable business value.
           </p>
 
           {/* CTA Buttons */}

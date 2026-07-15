@@ -17,80 +17,89 @@ export function ProjectsSection() {
 
   const projects = [
     {
+      title: 'Nexus AI Platform',
+      description: 'Modular enterprise AI platform composed of production-inspired applications demonstrating expertise in Agentic AI, LLM Engineering, RAG, and Production AI Systems',
+      image: 'https://images.unsplash.com/photo-1698306642516-9841228dcff3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxBSSUyMGhlYWx0aGNhcmUlMjBkYXRhfGVufDB8fHxibHVlfDE3ODQxNTIxNzF8MA&ixlib=rb-4.1.0&q=85',
+      category: ['AI', 'Enterprise', 'Featured'],
+      technologies: ['LangGraph', 'FastAPI', 'Claude', 'RAG', 'Docker', 'React'],
+      impact: ['Modular architecture', 'Shared authentication', 'Enterprise-ready', 'Reusable AI capabilities'],
+      color: '#4F8CFF',
+    },
+    {
+      title: 'Autonomous Data Analytics Agent',
+      description: 'AI-powered analytics agent that converts natural language into SQL, Python analysis, and interactive visualizations through autonomous tool calling',
+      image: 'https://images.unsplash.com/photo-1660165458059-57cfb6cc87e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwyfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHxibHVlfDE3ODQxNTI1NDh8MA&ixlib=rb-4.1.0&q=85',
+      category: ['AI', 'Agentic AI', 'Analytics'],
+      technologies: ['Python', 'LangGraph', 'FastAPI', 'SQL', 'Pandas', 'Plotly'],
+      impact: ['Natural language SQL', 'Autonomous analysis', 'Interactive visualizations', 'Tool calling'],
+      color: '#00D4FF',
+    },
+    {
+      title: 'Enterprise Knowledge Intelligence Platform',
+      description: 'Agentic RAG application that retrieves enterprise knowledge, validates evidence, cites sources, and generates grounded responses using multi-agent orchestration',
+      image: 'https://images.unsplash.com/photo-1617791160536-598cf32026fb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwzfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHxibHVlfDE3ODQxNTI1NDh8MA&ixlib=rb-4.1.0&q=85',
+      category: ['AI', 'RAG', 'Enterprise'],
+      technologies: ['LangGraph', 'Claude', 'RAG', 'Vector Search', 'ChromaDB', 'Embeddings'],
+      impact: ['Evidence validation', 'Source citation', 'Multi-agent orchestration', 'Grounded responses'],
+      color: '#7C5CFC',
+    },
+    {
+      title: 'Healthcare Multi-Agent Assistant',
+      description: 'Production-style healthcare assistant coordinating specialized AI agents to summarize clinical knowledge, policies, and operational workflows using RAG',
+      image: 'https://images.unsplash.com/photo-1560306990-18fa759c8713?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwyfHxoZWFsdGhjYXJlJTIwdGVjaG5vbG9neXxlbnwwfHx8Ymx1ZXwxNzg0MTUyNTQxfDA&ixlib=rb-4.1.0&q=85',
+      category: ['AI', 'Healthcare', 'Agentic AI'],
+      technologies: ['LangGraph', 'FastAPI', 'Claude', 'RAG', 'Healthcare AI'],
+      impact: ['Clinical knowledge', 'Policy summarization', 'Agent coordination', 'Healthcare workflows'],
+      color: '#4F8CFF',
+    },
+    {
+      title: 'Enterprise GenAI SaaS Platform',
+      description: 'Full-stack AI application with authentication, user workspaces, streaming LLM responses, REST APIs, and scalable cloud deployment',
+      image: 'https://images.unsplash.com/photo-1660583969160-43c87eb90401?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxBSSUyMGhlYWx0aGNhcmUlMjBkYXRhfGVufDB8fHxibHVlfDE3ODQxNTIxNzF8MA&ixlib=rb-4.1.0&q=85',
+      category: ['AI', 'Enterprise', 'SaaS'],
+      technologies: ['React', 'FastAPI', 'PostgreSQL', 'Docker', 'Redis', 'JWT'],
+      impact: ['User authentication', 'Streaming responses', 'Scalable deployment', 'Production-ready'],
+      color: '#00D4FF',
+    },
+    {
+      title: 'Domain-Adapted LLM Fine-Tuning',
+      description: 'Fine-tuned open-source LLM using parameter-efficient techniques to improve domain-specific reasoning, response quality, and inference efficiency',
+      image: 'https://images.unsplash.com/photo-1597733336794-12d05021d510?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwyfHxuZXVyYWwlMjBuZXR3b3JrfGVufDB8fHxibHVlfDE3ODQxNTIxODB8MA&ixlib=rb-4.1.0&q=85',
+      category: ['AI', 'ML', 'LLM'],
+      technologies: ['Llama', 'Hugging Face', 'PyTorch', 'LORA', 'QLORA', 'PEFT'],
+      impact: ['Domain adaptation', 'Parameter-efficient', 'Improved reasoning', 'Inference optimization'],
+      color: '#7C5CFC',
+    },
+    {
       title: 'Healthcare AI Lakehouse',
-      description: 'Enterprise-scale lakehouse architecture processing 15M+ records monthly with real-time analytics and ML capabilities',
-      image: 'https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwxfHxBSSUyMHRlY2hub2xvZ3l8ZW58MHx8fGJsdWV8MTc4Mzk1NjY0MHww&ixlib=rb-4.1.0&q=85',
-      category: ['Cloud', 'Healthcare', 'AI'],
-      technologies: ['Azure', 'Databricks', 'Delta Lake', 'Synapse', 'PySpark'],
-      impact: ['15M+ records/month', 'Real-time processing', '99.9% uptime'],
+      description: 'Enterprise lakehouse processing 2M+ records monthly with Medallion architecture, governed data layers, and AI-ready datasets',
+      image: 'https://images.unsplash.com/photo-1650327034581-1711a15a5430?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZW5naW5lZXJpbmd8ZW58MHx8fGJsdWV8MTc4NDE1MjE3Nnww&ixlib=rb-4.1.0&q=85',
+      category: ['Data Engineering', 'Healthcare', 'Cloud'],
+      technologies: ['Azure Databricks', 'PySpark', 'Delta Lake', 'Azure Synapse', 'Medallion Architecture'],
+      impact: ['2M+ records/month', '65% faster pipelines', 'Governed data', 'AI-ready datasets'],
       color: '#4F8CFF',
     },
     {
-      title: 'Revenue Cycle Intelligence Platform',
-      description: 'ML-powered platform predicting claim denials with 92% accuracy, optimizing revenue cycle operations',
-      image: 'https://images.pexels.com/photos/7947754/pexels-photo-7947754.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      title: 'Epic Healthcare Intelligence Platform',
+      description: 'Semantic data models from Epic Clarity and Caboodle supporting revenue cycle, clinical analytics, quality measures, and CMS reporting',
+      image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwdGVjaG5vbG9neXxlbnwwfHx8Ymx1ZXwxNzg0MTUyNTQxfDA&ixlib=rb-4.1.0&q=85',
+      category: ['Healthcare', 'Data Engineering', 'Analytics'],
+      technologies: ['Epic Clarity', 'Epic Caboodle', 'SQL Server', 'Power BI', 'T-SQL', 'DAX'],
+      impact: ['35% faster dashboards', 'Semantic modeling', 'HIPAA compliant', 'Revenue cycle optimization'],
+      color: '#00D4FF',
+    },
+    {
+      title: 'Predictive Healthcare Analytics',
+      description: 'ML models achieving 92% accuracy, processing 12M+ Medicaid claims to support $2.5M+ healthcare funding decisions',
+      image: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwyfHxkYXRhJTIwZW5naW5lZXJpbmd8ZW58MHx8fGJsdWV8MTc4NDE1MjE3Nnww&ixlib=rb-4.1.0&q=85',
       category: ['ML', 'Healthcare', 'Analytics'],
-      technologies: ['Python', 'Scikit-Learn', 'Power BI', 'SQL', 'Azure ML'],
-      impact: ['92% accuracy', '$10M+ revenue impact', '50+ dashboards'],
-      color: '#00D4FF',
-    },
-    {
-      title: 'Enterprise Data Platform',
-      description: 'Scalable multi-cloud data platform with automated ETL pipelines and unified analytics layer',
-      image: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwyfHxkYXRhJTIwZW5naW5lZXJpbmd8ZW58MHx8fGJsdWV8MTc4Mzk1NjYzNHww&ixlib=rb-4.1.0&q=85',
-      category: ['Cloud', 'Data Engineering'],
-      technologies: ['Snowflake', 'Airflow', 'DBT', 'Python', 'Docker'],
-      impact: ['200+ users', '65% faster pipelines', 'Multi-cloud'],
+      technologies: ['Python', 'Scikit-Learn', 'Feature Engineering', 'Snowflake', 'Power BI'],
+      impact: ['92% accuracy', '12M+ records', '$2.5M+ decisions', 'Predictive models'],
       color: '#7C5CFC',
-    },
-    {
-      title: 'FHIR Analytics Engine',
-      description: 'Healthcare interoperability solution processing standardized FHIR resources for clinical analytics',
-      image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwyfHxBSSUyMHRlY2hub2xvZ3l8ZW58MHx8fGJsdWV8MTc4Mzk1NjY0MHww&ixlib=rb-4.1.0&q=85',
-      category: ['Healthcare', 'Data Engineering'],
-      technologies: ['FHIR', 'Azure', 'Python', 'SQL', 'REST APIs'],
-      impact: ['HIPAA compliant', 'Real-time sync', 'Standardized data'],
-      color: '#4F8CFF',
-    },
-    {
-      title: 'Healthcare Knowledge Assistant (RAG)',
-      description: 'AI-powered assistant using RAG architecture to provide intelligent insights from medical documentation',
-      image: 'https://images.pexels.com/photos/10827984/pexels-photo-10827984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      category: ['AI', 'Healthcare'],
-      technologies: ['OpenAI', 'LangChain', 'Vector DB', 'Python', 'FastAPI'],
-      impact: ['Natural language queries', 'Contextual answers', 'Document intelligence'],
-      color: '#00D4FF',
-    },
-    {
-      title: 'Customer Churn Prediction',
-      description: 'Predictive ML model identifying at-risk customers with proactive retention strategies',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHw0fHxBSSUyMHRlY2hub2xvZ3l8ZW58MHx8fGJsdWV8MTc4Mzk1NjY0MHww&ixlib=rb-4.1.0&q=85',
-      category: ['ML', 'Analytics'],
-      technologies: ['Python', 'TensorFlow', 'Pandas', 'Scikit-Learn'],
-      impact: ['85% accuracy', 'Early detection', 'Automated alerts'],
-      color: '#7C5CFC',
-    },
-    {
-      title: 'AI Data Quality Monitoring',
-      description: 'Intelligent monitoring system using ML to detect data anomalies and ensure quality',
-      image: 'https://images.unsplash.com/photo-1660165458059-57cfb6cc87e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwzfHxBSSUyMHRlY2hub2xvZ3l8ZW58MHx8fGJsdWV8MTc4Mzk1NjY0MHww&ixlib=rb-4.1.0&q=85',
-      category: ['AI', 'Data Engineering'],
-      technologies: ['Python', 'Great Expectations', 'MLflow', 'Airflow'],
-      impact: ['40% quality improvement', 'Automated validation', 'Real-time alerts'],
-      color: '#4F8CFF',
-    },
-    {
-      title: 'Healthcare Claims Analytics Platform',
-      description: 'Comprehensive analytics platform for healthcare claims processing and insights',
-      image: 'https://images.pexels.com/photos/37911407/pexels-photo-37911407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      category: ['Healthcare', 'Analytics'],
-      technologies: ['Power BI', 'SQL Server', 'SSIS', 'Python'],
-      impact: ['Claims processing', 'Cost optimization', 'Fraud detection'],
-      color: '#00D4FF',
     },
   ];
 
-  const filters = ['All', 'Cloud', 'AI', 'ML', 'Healthcare', 'Data Engineering', 'Analytics'];
+  const filters = ['All', 'AI', 'Agentic AI', 'RAG', 'Healthcare', 'Data Engineering', 'Enterprise', 'ML', 'Featured'];
 
   const filteredProjects = selectedFilter === 'All'
     ? projects
@@ -109,7 +118,7 @@ export function ProjectsSection() {
             Featured Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Enterprise-scale solutions delivering measurable business impact
+            Production AI systems, enterprise data platforms, and intelligent healthcare solutions
           </p>
         </motion.div>
 

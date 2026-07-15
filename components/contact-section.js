@@ -91,19 +91,19 @@ export function ContactSection() {
     {
       name: 'Email',
       icon: Mail,
-      href: 'mailto:avinash.yavvari@example.com',
+      href: 'mailto:avinashyavvari3512@gmail.com',
       color: '#4F8CFF',
     },
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      href: 'https://linkedin.com/in/avinash-yavvari',
+      href: 'https://linkedin.com/in/ayavvari',
       color: '#00D4FF',
     },
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/avinash-yavvari',
+      href: 'https://github.com/ayavvari',
       color: '#7C5CFC',
     },
   ];
@@ -187,19 +187,19 @@ export function ContactSection() {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start">
                   <span className="text-[#4F8CFF] mr-2">▸</span>
-                  <span>Enterprise AI platform architecture roles</span>
+                  <span>Enterprise AI platform architecture & agentic workflows</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#00D4FF] mr-2">▸</span>
-                  <span>Data engineering leadership opportunities</span>
+                  <span>Healthcare data engineering & lakehouse design</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#7C5CFC] mr-2">▸</span>
-                  <span>Healthcare analytics & AI projects</span>
+                  <span>Production AI systems & LLM integration</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#4F8CFF] mr-2">▸</span>
-                  <span>Consulting & advisory engagements</span>
+                  <span>RAG applications & domain-adapted models</span>
                 </li>
               </ul>
             </div>

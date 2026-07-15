@@ -9,22 +9,22 @@ export function Footer() {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/avinash-yavvari',
+      href: 'https://linkedin.com/in/ayavvari',
       label: 'LinkedIn',
     },
     {
       icon: Github,
-      href: 'https://github.com/avinash-yavvari',
+      href: 'https://github.com/ayavvari',
       label: 'GitHub',
     },
     {
       icon: Twitter,
-      href: 'https://twitter.com/avinash-yavvari',
+      href: 'https://twitter.com/ayavvari',
       label: 'Twitter',
     },
     {
       icon: Mail,
-      href: 'mailto:avinash.yavvari@example.com',
+      href: 'mailto:avinashyavvari3512@gmail.com',
       label: 'Email',
     },
   ];
@@ -43,7 +43,7 @@ export function Footer() {
               Avinash Yavvari
             </h3>
             <p className="text-muted-foreground">
-              Senior Data Engineer & AI Platform Architect
+              AI & Data Engineering Leader
             </p>
           </div>
 

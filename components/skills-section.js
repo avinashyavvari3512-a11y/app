@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Cloud, Database, Code, Brain, BarChart3, Cog } from 'lucide-react';
+import { Cloud, Database, Code, Brain, BarChart3, Cog, Layers, Zap } from 'lucide-react';
 
 export function SkillsSection() {
   const [ref, inView] = useInView({
@@ -12,40 +12,52 @@ export function SkillsSection() {
 
   const skillCategories = [
     {
-      name: 'Cloud Platforms',
-      icon: Cloud,
+      name: 'AI & LLM Engineering',
+      icon: Brain,
       color: '#4F8CFF',
-      skills: ['Azure', 'AWS', 'Google Cloud', 'Kubernetes', 'Docker'],
+      skills: ['LangGraph', 'RAG', 'Agentic AI', 'Claude', 'Llama', 'Hugging Face', 'PyTorch', 'QLORA', 'PEFT', 'LLM Fine-Tuning'],
     },
     {
       name: 'Data Engineering',
       icon: Database,
       color: '#00D4FF',
-      skills: ['Databricks', 'Snowflake', 'Spark', 'PySpark', 'Delta Lake', 'Kafka', 'Airflow', 'ADF', 'Synapse'],
+      skills: ['Azure Databricks', 'Snowflake', 'PySpark', 'Delta Lake', 'Azure Data Factory', 'Azure Synapse', 'Airflow', 'CDC', 'Medallion Architecture'],
     },
     {
-      name: 'Programming',
+      name: 'Programming & Frameworks',
       icon: Code,
       color: '#7C5CFC',
-      skills: ['Python', 'SQL', 'Java', 'JavaScript', 'TypeScript', 'Scala'],
+      skills: ['Python', 'SQL', 'T-SQL', 'FastAPI', 'Pandas', 'TensorFlow', 'spaCy', 'NetworkX', 'React'],
     },
     {
-      name: 'AI & Machine Learning',
-      icon: Brain,
+      name: 'Healthcare & Epic',
+      icon: Layers,
       color: '#4F8CFF',
-      skills: ['OpenAI', 'LangChain', 'MLflow', 'TensorFlow', 'Scikit-Learn', 'RAG', 'Vector DBs', 'MCP'],
+      skills: ['Epic Clarity', 'Epic Caboodle', 'HIPAA', 'PHI Governance', 'HEDIS', 'CMS Reporting', 'Clinical Data'],
     },
     {
-      name: 'Business Intelligence',
-      icon: BarChart3,
+      name: 'Cloud & Infrastructure',
+      icon: Cloud,
       color: '#00D4FF',
-      skills: ['Power BI', 'Tableau', 'Looker', 'DAX', 'Advanced Analytics'],
+      skills: ['Azure', 'Docker', 'Redis', 'PostgreSQL', 'Azure DevOps', 'Git', 'CI/CD'],
     },
     {
-      name: 'DevOps & Tools',
-      icon: Cog,
+      name: 'Analytics & BI',
+      icon: BarChart3,
       color: '#7C5CFC',
-      skills: ['Git', 'GitHub Actions', 'CI/CD', 'Terraform', 'Jenkins'],
+      skills: ['Power BI', 'DAX', 'Tableau', 'Plotly', 'Semantic Modeling', 'Dimensional Modeling'],
+    },
+    {
+      name: 'ML & Data Science',
+      icon: Zap,
+      color: '#4F8CFF',
+      skills: ['Feature Engineering', 'ML Pipelines', 'NLP', 'Predictive Modeling', 'Statistical Analysis', 'Graph Analytics'],
+    },
+    {
+      name: 'Data Governance',
+      icon: Cog,
+      color: '#00D4FF',
+      skills: ['Row Level Security', 'Master Data Management', 'Data Quality', 'Data Lineage', 'Auditability', 'SLA Tracking'],
     },
   ];
 
@@ -62,11 +74,11 @@ export function SkillsSection() {
             Technical Expertise
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A comprehensive toolkit for building enterprise-scale intelligent systems
+            Comprehensive toolkit for building enterprise AI platforms and governed data products
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
             return (
@@ -75,26 +87,26 @@ export function SkillsSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass-card p-8 rounded-2xl hover:scale-105 transition-all duration-300 group cursor-pointer"
+                className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group cursor-pointer"
                 style={{
                   borderColor: `${category.color}40`,
                 }}
               >
-                <div className="flex items-center mb-6">
+                <div className="flex items-center mb-4">
                   <div
-                    className="p-3 rounded-lg mr-4"
+                    className="p-3 rounded-lg mr-3"
                     style={{
                       background: `${category.color}20`,
                       border: `1px solid ${category.color}40`,
                     }}
                   >
                     <Icon
-                      className="w-6 h-6 group-hover:scale-110 transition-transform"
+                      className="w-5 h-5 group-hover:scale-110 transition-transform"
                       style={{ color: category.color }}
                     />
                   </div>
                   <h3
-                    className="text-xl font-bold"
+                    className="text-lg font-bold"
                     style={{ color: category.color }}
                   >
                     {category.name}
@@ -108,7 +120,7 @@ export function SkillsSection() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={inView ? { opacity: 1, scale: 1 } : {}}
                       transition={{ duration: 0.3, delay: index * 0.1 + i * 0.05 }}
-                      className="px-3 py-1.5 rounded-full text-sm font-medium bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors"
+                      className="px-2 py-1 rounded-full text-xs font-medium bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors"
                     >
                       {skill}
                     </motion.span>
