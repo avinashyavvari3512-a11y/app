@@ -24,7 +24,6 @@ export function ProjectsSection() {
       technologies: ['LangGraph', 'FastAPI', 'Claude', 'RAG', 'Docker', 'React'],
       impact: ['Modular architecture', 'Shared authentication', 'Enterprise-ready', 'Reusable AI capabilities'],
       color: '#4F8CFF',
-      architectureLink: '/nexus-ai',
     },
     {
       title: 'Autonomous Data Analytics Agent',
