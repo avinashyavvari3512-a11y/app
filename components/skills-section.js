@@ -15,7 +15,11 @@ export function SkillsSection() {
       name: 'AI & LLM Engineering',
       icon: Brain,
       color: '#4F8CFF',
+<<<<<<< HEAD
       skills: ['LangGraph', 'RAG', 'Agentic AI', 'Claude', 'Llama', 'Hugging Face', 'PyTorch', 'QLORA', 'PEFT', 'LLM Fine-Tuning'],
+=======
+      skills: ['Azure', 'Google Cloud', 'Kubernetes', 'Docker'],
+>>>>>>> 967a597f24b4cecdb7a75b4d5243da9e1891f206
     },
     {
       name: 'Data Engineering',

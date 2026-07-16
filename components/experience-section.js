@@ -14,6 +14,7 @@ export function ExperienceSection() {
     {
       company: 'Henry Ford Health',
       role: 'Senior Business Intelligence Developer',
+<<<<<<< HEAD
       period: '2024 - Present',
       location: 'Detroit, MI',
       color: '#4F8CFF',
@@ -23,6 +24,16 @@ export function ExperienceSection() {
         'Designed governed analytical datasets supporting patient throughput, quality measures, CMS reporting, value-based care, and executive decision-making',
         'Automated data validation, reconciliation, anomaly detection, and business rule enforcement using Python and SQL, improving production data quality',
         'Strengthened enterprise data governance through HIPAA-compliant access controls, PHI protection, Row Level Security, Azure DevOps release management, and version-controlled deployments',
+=======
+      period: 'Feb 2026 - July 2026',
+      location: 'Detroit, MI',
+      color: '#4F8CFF',
+      achievements: [
+        'Consolidated competing KPI definitions into reusable Epic Clarity, Caboodle, SQL Server, Power BI, and DAX semantic models, improving dashboard performance by 35% across clinical, finance, revenue cycle, and patient throughput reporting.',
+        'A 35% reduction in refresh time followed the redesign of revenue cycle transformations into reusable T-SQL procedures, indexed views, and optimized Power BI datasets, accelerating denial, reimbursement, and financial analysis.',
+        'Board and operational dashboards depended on daily data accuracy; embedded reconciliation, exception handling, and business rules through SQL, Python, and Power BI, detecting defects before CMS, HEDIS, clinical quality, and executive reporting.',
+        'Governed deployments through Azure DevOps, Git, SQL Server security, RLS, PHI controls, and Agile release processes stabilized critical reporting while preserving secure, HIPAA aligned access.',
+>>>>>>> 967a597f24b4cecdb7a75b4d5243da9e1891f206
       ],
       technologies: ['SQL Server', 'T-SQL', 'Python', 'Power BI', 'DAX', 'Epic Clarity', 'Epic Caboodle', 'Azure DevOps', 'HIPAA'],
     },
