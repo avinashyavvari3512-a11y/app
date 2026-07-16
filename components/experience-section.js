@@ -14,7 +14,6 @@ export function ExperienceSection() {
     {
       company: 'Henry Ford Health',
       role: 'Senior Business Intelligence Developer',
-<<<<<<< HEAD
       period: 'Feb 2026 - july 2026',
       location: 'Detroit, MI',
       color: '#4F8CFF',
