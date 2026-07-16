@@ -103,7 +103,7 @@ export function ContactSection() {
     {
       name: 'GitHub',
       icon: Github,
-      href: 'https://github.com/avinash-yavvari',
+      href: 'https://github.com/avinashyavvari3512-a11y',
       color: '#7C5CFC',
     },
   ];
